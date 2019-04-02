@@ -6,7 +6,7 @@ var GraphQLNonNull = require('graphql').GraphQLNonNull;
 var GraphQLID = require('graphql').GraphQLID;
 var GraphQLString = require('graphql').GraphQLString;
 var GraphQLInt = require('graphql').GraphQLInt;
-var GraphQLDate = require('graphql-date');
+// var GraphQLDate = require('graphql-date');
 var BookModel = require('../models/Book');
 
 var bookType = new GraphQLObjectType({
@@ -33,10 +33,10 @@ var bookType = new GraphQLObjectType({
             },
             publisher: {
                 type: GraphQLString
-            },
-            updated_date: {
-                type: GraphQLDate
             }
+            // updated_date: {
+            //     type: GraphQLDate
+            // }
         }
     }
 });
