@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { BooksComponent } from './books/books.component';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 import { DetailsComponent } from './books/details/details.component';
 import { AddComponent } from './books/add/add.component';
 import { EditComponent } from './books/edit/edit.component';
@@ -56,7 +57,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   providers: [],
   bootstrap: [AppComponent]
-})
+});
 export class AppModule {
   constructor(apollo: Apollo, httpLink: HttpLink) {
     apollo.create({
