@@ -25,6 +25,8 @@ import {
   MatFormFieldModule
 } from '@angular/material';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,18 @@ import {
     HttpClientModule,
     ApolloModule,
     HttpLinkModule,
-    BrowserAnimationsModule
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
