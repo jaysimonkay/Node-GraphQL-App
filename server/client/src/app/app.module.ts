@@ -13,8 +13,26 @@ import { AddComponent } from './books/add/add.component';
 import { EditComponent } from './books/edit/edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {
+  MatInputModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSortModule,
+  MatTableModule,
+  MatIconModule,
+  MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule
+} from '@angular/material';
+
 @NgModule({
-  declarations: [AppComponent, BooksComponent, DetailsComponent, AddComponent, EditComponent],
+  declarations: [
+    AppComponent,
+    BooksComponent,
+    DetailsComponent,
+    AddComponent,
+    EditComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
