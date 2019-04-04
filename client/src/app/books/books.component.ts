@@ -9,7 +9,31 @@ import { Book } from './book';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent implements OnInit {
-  constructor() {}
+  displayedColumns: string[] = ['title', 'author'];
+  data: Book[] = [];
+  resp: any = {};
+  isLoadingResults = true;
 
-  ngOnInit() {}
+  constructor(private apollo: Apollo) {}
+
+  ngOnInit() {
+    this.apollo
+      .query({
+        query: gql`
+          {
+            books {
+              _id
+              title
+              author
+            }
+          }
+        `
+      })
+      .subscribe(res => {
+        this.resp = res;
+        this.data = this.resp.data.books;
+        console.log(this.data);
+        this.isLoadingResults = false;
+      });
+  }
 }
